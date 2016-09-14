@@ -1,2 +1,2 @@
-Sketchbook_Starter_Kit_V2.0
+Grove System Starterkit examples for Processing
 ===========================
