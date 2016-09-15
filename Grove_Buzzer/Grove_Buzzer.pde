@@ -1,3 +1,7 @@
+
+// WERKT NOG NIET!! //
+// ECHT NIET //
+
 /* Melody
  * (cleft) 2005 D. Cuartielles for K3
  *
@@ -24,6 +28,13 @@
  *
  * http://www.arduino.cc/en/Tutorial/Melody
  */
+
+// imports: serial en arduino
+import processing.serial.*;
+import cc.arduino.*;
+
+// variabelen klaarzetten
+Arduino arduino;
 
 int speakerPin = 3;                  // Grove Buzzer connect to D3
 

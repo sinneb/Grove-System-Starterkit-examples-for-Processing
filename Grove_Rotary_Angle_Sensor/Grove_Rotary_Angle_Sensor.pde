@@ -1,26 +1,33 @@
 // Demo for Grove - Starter Kit V2.0
+// Edited for Processing: Arthur Bennis 2016-09-15
 
 // Prints the value of the potentiometer to the serial console.
 // Connect the Grove - Rotary Angle Sensor to the socket marked A0
-// Open the Serial Monitor in the Arduino IDE after uploading
+
+// imports: serial en arduino
+import processing.serial.*;
+import cc.arduino.*;
+
+// variabelen klaarzetten
+Arduino arduino;
 
 // Define the pin to which the angle sensor is connected.
-const int potentiometer = A0;
+int potentiometer = 0;
 
 void setup()
 {
-    // Configure the serial communication line at 9600 baud (bits per second.)
-    Serial.begin(9600);
-
+    // Grove koppelen
+    arduino = new Arduino(this, Arduino.list()[2], 57600);
+    
     // Configure the angle sensor's pin for input.
-    pinMode(potentiometer, INPUT);
+    arduino.pinMode(potentiometer, Arduino.INPUT);
 }
 
-void loop()
+void draw()
 {
     // Read the value of the sensor and print it to the serial console.
-    int value = analogRead(potentiometer);
-    Serial.println(value);
+    int value = arduino.analogRead(potentiometer);
+    println(value);
 
     // Wait 0.1 seconds between readings.
     delay(100);
