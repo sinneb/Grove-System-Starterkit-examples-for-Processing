@@ -21,10 +21,13 @@ ControlP5 cp5;
 boolean running = false;
 PImage img;
 
+// settings, draait eenmalig
+void settings() {
+  size(470, 280);
+}
+
 // setup, draait eenmalig
 void setup() {
-  size(470, 280);
-
   // Lijstje maken met porten van Arduino
   String[] arduinoPorts = Arduino.list();
   
