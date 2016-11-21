@@ -6,10 +6,10 @@ Movie myMovie;
 
 // setup draait eenmalig
 void setup() {
-  fullScreen(1);
-  //size(500, 500);
+  //fullScreen(1);
+  size(640, 480);
   // video inladen
-  myMovie = new Movie(this, "/Users/Arthur/Desktop/sw.mov");
+  myMovie = new Movie(this, "/Users/Arthur/Desktop/testmovie.mov");
   // video spelen
   myMovie.play();
 }
@@ -17,7 +17,7 @@ void setup() {
 // draw draait continue
 void draw() {
   // video tonen op scherm
-  image(myMovie, 1000, 0);
+  image(myMovie, 0, 0);
 }
 
 // nodig voor video
